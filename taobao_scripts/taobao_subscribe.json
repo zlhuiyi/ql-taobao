@@ -1,0 +1,44 @@
+{
+  "name": "淘宝自动化脚本",
+  "scripts": [
+    {
+      "name": "淘宝自动任务",
+      "path": "taobao_auto.js",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "name": "淘宝淘金币任务",
+      "path": "taobao_coin.js",
+      "schedule": "0 8 * * *"
+    },
+    {
+      "name": "淘宝店铺收藏有礼",
+      "path": "taobao_shop_favorites.js",
+      "schedule": "0 10 * * *"
+    }
+  ],
+  "dependencies": {
+    "axios": "^0.21.1",
+    "request": "^2.88.2"
+  },
+  "environment": [
+    {
+      "name": "TB_COOKIE",
+      "value": "",
+      "required": true,
+      "description": "淘宝Cookie，登录淘宝网站后F12获取"
+    },
+    {
+      "name": "PUSH_KEY",
+      "value": "",
+      "required": false,
+      "description": "Server酱SCKEY，用于消息推送"
+    },
+    {
+      "name": "PUSH_PLUS_TOKEN",
+      "value": "",
+      "required": false,
+      "description": "Push Plus Token，用于消息推送"
+    }
+  ]
+}
